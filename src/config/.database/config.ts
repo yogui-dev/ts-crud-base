@@ -3,16 +3,17 @@ import { Sequelize } from "sequelize-typescript";
 import { User } from "../../models/users.model";
 
 import dotenv from "dotenv";
+import env from "../env.config";
 
 dotenv.config();
 
 export const sequelize = new Sequelize({
-  dialect: process.env.DB_DIALECT as any, // puedes hacer una validación aquí si quieres
-  host: process.env.DB_HOST,
-  port: Number(process.env.DB_PORT),
-  username: process.env.DB_USER,
-  password: process.env.DB_PASS,
-  database: process.env.DB_NAME,
+  dialect: env.DB_DIALECT as any,   
+  host: env.DB_HOST,
+  port: Number(env.DB_PORT),
+  username: env.DB_USER,
+  password: env.DB_PASS,
+  database: env.DB_NAME,
   models: [User],
   logging: false,
 });

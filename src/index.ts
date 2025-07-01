@@ -1,12 +1,11 @@
 import express from "express";
 import router from "./routes";
-import dotenv from "dotenv";
 import { sequelize } from "./config/.database/config";
-
-dotenv.config();
+import "./config/env.config";
+import env from "./config/env.config";
 
 const app = express();
-const PORT = process.env.PORT || 3000;
+const PORT = env.PORT;
 
 app.use(express.json());
 app.use("/api/v1", router);
