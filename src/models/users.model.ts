@@ -4,17 +4,24 @@ import {
   Column,
   Model,
   PrimaryKey,
-  AutoIncrement,
   DataType,
 } from "sequelize-typescript";
 
-@Table({ tableName: "users", timestamps: false })
+@Table({ tableName: "users", timestamps: true })
 export class User extends Model<User> {
   @PrimaryKey
-  @AutoIncrement
-  @Column(DataType.INTEGER)
-  id!: number;
+  @Column({ type: DataType.UUID, defaultValue: DataType.UUIDV4 })
+  uuid!: string;
 
-  @Column(DataType.STRING)
-  name!: string;
+  @Column({ type: DataType.STRING, allowNull: false, field: "first_name" })
+  firstName!: string;
+
+  @Column({ type: DataType.STRING, allowNull: true, field: "last_name" })
+  lastName?: string;
+
+  @Column({ type: DataType.STRING, allowNull: false, unique: true })
+  email!: string;
+
+  @Column({ type: DataType.STRING, allowNull: true })
+  phone?: string;
 }

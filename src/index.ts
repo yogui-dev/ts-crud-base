@@ -16,7 +16,9 @@ sequelize
   .then(() => {
     console.log("✅ Conexión a la base de datos establecida.");
 
-    return sequelize.sync(); // O .sync({ alter: true }) en desarrollo
+    return sequelize.sync({ force: true }).then(() => {
+      console.log("🧨 Todas las tablas fueron eliminadas y recreadas.");
+    });
   })
   .then(() => {
     app.listen(PORT, () => {
