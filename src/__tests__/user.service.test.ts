@@ -45,7 +45,7 @@ describe("UserService - CRUD", () => {
 
   it("DELETE - debería eliminar el usuario", async () => {
     const deleted = await UserService.delete(createdUserId);
-    expect(deleted).toHaveProperty("success", true);
+    expect(deleted).toHaveProperty("uuid", createdUserId);
 
     const check = await UserService.find(createdUserId);
     expect(check).toBeNull();

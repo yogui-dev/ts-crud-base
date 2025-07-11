@@ -54,7 +54,7 @@ export default class UserService {
             if (!user) return null;
 
             const deleted = await user.destroy();
-            return { success: deleted };
+            return deleted;
         } catch (error) {
             throw error;
         }
