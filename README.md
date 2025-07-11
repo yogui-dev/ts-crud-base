@@ -62,19 +62,52 @@ pnpm start
 ```
 src/
 ├── controllers/    # Controladores de la aplicación
-├── routes/        # Rutas de la API
-├── index.ts       # Punto de entrada de la aplicación
-└── types/         # Tipos de TypeScript
+├── routes/         # Rutas de la API
+├── services/       # Lógica de negocio y acceso a datos
+├── models/         # Definición de modelos y ORM
+├── config/         # Configuración de base de datos y entorno
+├── __tests__/      # Pruebas unitarias
+├── index.ts        # Punto de entrada de la aplicación
+└── types/          # Tipos de TypeScript
 ```
+
 
 ## 🌐 Endpoints Disponibles
 
-- `GET /` - Página de inicio
-- `GET /users` - Obtener todos los usuarios
-- `GET /users/:id` - Obtener un usuario por ID
-- `POST /users` - Crear un nuevo usuario
-- `PUT /users/:id` - Actualizar un usuario
-- `DELETE /users/:id` - Eliminar un usuario
+| Método | Endpoint      | Descripción                   |
+|--------|--------------|-------------------------------|
+| GET    | /            | Página de inicio              |
+| GET    | /users       | Obtener todos los usuarios    |
+| GET    | /users/:id   | Obtener un usuario por ID     |
+| POST   | /users       | Crear un nuevo usuario        |
+| PUT    | /users/:id   | Actualizar un usuario         |
+| DELETE | /users/:id   | Eliminar un usuario           |
+
+### Ejemplo de respuesta para `POST /users`
+```json
+{
+  "uuid": "e2f1...",
+  "firstName": "Jorge Miguel",
+  "lastName": "Arias",
+  "email": "jorge.m.arias.p@gmail.com",
+  ...
+}
+```
+
+### Ejemplo de error
+```json
+{
+  "error": "Mensaje de error"
+}
+```
+
+## 🧪 Pruebas y Colección Postman
+
+- Las pruebas unitarias están en `src/__tests__/` y se ejecutan con:
+  ```bash
+  pnpm test
+  ```
+- Puedes importar la colección `MODULO 3.postman_collection.json` en Postman para probar todos los endpoints fácilmente. Incluye scripts para guardar el `uuid` de usuario creado y facilitar pruebas encadenadas.
 
 ## 🛠️ Herramientas Utilizadas
 
