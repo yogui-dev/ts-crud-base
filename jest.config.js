@@ -6,4 +6,7 @@ module.exports = {
   transform: {
     "^.+\\.tsx?$": "ts-jest",
   },
+  moduleNameMapper: {
+    "^@/(.*)$": "<rootDir>/src/$1", // 👈 esto permite resolver `@/` como `src/`
+  },
 };
