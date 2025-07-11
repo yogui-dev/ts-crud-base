@@ -1,0 +1,132 @@
+{
+	"id": "bc1909e7-9b2b-4626-80c5-cc4e3cfc9fa8",
+	"name": "MODULO 3",
+	"timestamp": "2025-07-11T04:36:52.789Z",
+	"collection_id": "4307753-6c4017aa-469c-4748-a484-0a361c26175b",
+	"folder_id": 0,
+	"environment_id": "4307753-fe8e8dd6-c340-4d8b-a168-9b8351149fb2",
+	"totalPass": 0,
+	"delay": 0,
+	"persist": true,
+	"status": "finished",
+	"startedAt": "2025-07-11T04:36:49.706Z",
+	"totalFail": 0,
+	"results": [
+		{
+			"id": "f6769a20-5fa9-411c-bf7b-a5493262bc7a",
+			"name": "CREATE USER",
+			"url": "http://localhost:3000/api/v1/users/",
+			"time": 1527,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				1527
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "23b433bf-6937-4054-9a91-b9ec38ce6edb",
+			"name": "GET USERS",
+			"url": "http://localhost:3000/api/v1/users",
+			"time": 169,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				169
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "88d53e0a-d7d7-4f3c-b13d-fad0c364ed05",
+			"name": "GET USER",
+			"url": "http://localhost:3000/api/v1/users/ff56fffd-de7a-43bf-b70e-7406ff567815",
+			"time": 170,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				170
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "87cdc622-2720-40d3-8248-95ed78a769e1",
+			"name": "UPDATE USER",
+			"url": "http://localhost:3000/api/v1/users/ff56fffd-de7a-43bf-b70e-7406ff567815",
+			"time": 168,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				168
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "9ace5f0c-ef4c-43e1-b2f8-3df37ff17184",
+			"name": "DELETE USER",
+			"url": "http://localhost:3000/api/v1/users/ff56fffd-de7a-43bf-b70e-7406ff567815",
+			"time": 660,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				660
+			],
+			"allTests": [
+				{}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 2694,
+	"collection": {
+		"requests": [
+			{
+				"id": "f6769a20-5fa9-411c-bf7b-a5493262bc7a",
+				"method": "POST"
+			},
+			{
+				"id": "23b433bf-6937-4054-9a91-b9ec38ce6edb",
+				"method": "GET"
+			},
+			{
+				"id": "88d53e0a-d7d7-4f3c-b13d-fad0c364ed05",
+				"method": "GET"
+			},
+			{
+				"id": "87cdc622-2720-40d3-8248-95ed78a769e1",
+				"method": "PUT"
+			},
+			{
+				"id": "9ace5f0c-ef4c-43e1-b2f8-3df37ff17184",
+				"method": "DELETE"
+			}
+		]
+	}
+}
